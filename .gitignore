@@ -65,5 +65,5 @@ node_modules/
 .env
 
 # Testing for gitignore files.
-.ignoreMe.js
+.ignoreThis
 gitIgnore/
