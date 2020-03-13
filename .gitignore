@@ -65,6 +65,7 @@ node_modules/
 .env
 
 # Testing for gitignore files----------
+# simply using the filename will work for any matching filename.
 ignoreFile.js
 # This syntax works for specifying a folder to be ignored.
 gitIgnore/
