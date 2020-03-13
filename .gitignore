@@ -64,6 +64,8 @@ node_modules/
 # dotenv environment variables file
 .env
 
-# Testing for gitignore files.
+# Testing for gitignore files----------
+
 .ignoreThis
+# This syntax works for specifying a folder to be ignored.
 gitIgnore/
