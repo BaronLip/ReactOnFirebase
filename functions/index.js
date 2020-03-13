@@ -23,4 +23,26 @@ exports.getHollers = functions.https.onRequest((request, response) => {
         return response.json(hollers);
     })
     .catch(error => console.log(error));
-}) 
+});
+
+exports.createHoller = functions.https.onRequest((request, response) => {
+    const newHoller = {
+        body: request.body.body,
+        userName: request.body.userName,
+        createdAt: admin.firestore.Timestamp.fromDate(new Date())
+    }
+
+    admin.firestore()
+        .collection("hollers")
+        .add(newHoller)
+        .then(doc => {
+            response.json({
+                message: `document ${doc.id} created successfully.`
+            });
+        })
+        .catch(error => {
+            response.status(500).json({error: "Something is wrong. Check the console for the error."});
+            console.log(error);
+        });
+});
+
