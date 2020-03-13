@@ -66,6 +66,6 @@ node_modules/
 
 # Testing for gitignore files----------
 # simply using the filename will work for any matching filename.
-ignoreFile.js
+serviceAccountKey.json
 # This syntax works for specifying a folder to be ignored.
 gitIgnore/

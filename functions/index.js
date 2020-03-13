@@ -1,9 +1,13 @@
 const functions = require('firebase-functions');
 
+var serviceAccount = require("../serviceAccountKey.json");
 // import firebase-admin to allow access to the database. It is a SDK (software development kit).
 const admin = require('firebase-admin');
-// 
-admin.initializeApp();
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://reactonfirebase.firebaseio.com"
+});
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
