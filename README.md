@@ -34,3 +34,10 @@ Updated firebase.json file to have "host" and "port" info. (Didn't work.)
 Restarted system (F'ing worked...unbelievable.)
 ---commit---
 
+Added conditional for createHoller function, must be a POST request.
+It works using local server.
+---commit---
+
+Install Express.js within /functions folder.
+$ npm install --save express
+---commit---
