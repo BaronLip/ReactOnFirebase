@@ -30,6 +30,12 @@ exports.getHollers = functions.https.onRequest((request, response) => {
 });
 
 exports.createHoller = functions.https.onRequest((request, response) => {
+    if (request.method !== "POST") {
+        return response.status(400).json({
+            error: "Method not allowed."
+        });
+    }
+    
     const newHoller = {
         body: request.body.body,
         userName: request.body.userName,
